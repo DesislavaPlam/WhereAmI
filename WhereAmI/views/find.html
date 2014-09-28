@@ -1,5 +1,11 @@
-<div data-role="view" data-title="Find" data-layout="main" data-model="APP.models.find">
-    <h1 data-bind="html: title"></h1>
+<div data-role="view" data-title="Find" data-layout="main" data-show = "app.viewmodels.initKendo.initMaps">
+    <h1 >Your location</h1>
     <div id="map" style="height: 300%; width: 100%; position: absolute; min-width:100%"></div>
+     <p>
+        <button
+           data-role="button"
+           data-bind="events:{click: createGoogleMap}"
+           class="buttonHome">Find Me</button>
+    </p>
     <p id="location" style="position: absolute" data-bind="events:{deviceready: getCurrentLocation}"></p>
 </div>
