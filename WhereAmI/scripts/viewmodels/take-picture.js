@@ -10,7 +10,7 @@ app.viewmodels = app.viewmodels || {};
     }
         
     var onFail = function onFail(message) {
-        navigator.notification.alert('Failed because: ' + message);
+        navigator.notification.alert('Nothing selected, ' + message.toLowerCase(), function() {}, 'Please select image');
     }
     
     function init(e) {

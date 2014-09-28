@@ -21,7 +21,7 @@ var getPosition = function (useLocation) {
                                      useLocation('The location is' + results[0], pos);
                                  } else {
                                      navigator.notification.alert(currentLocation = 'Location unavailable. Please check internet connection', function() {
-                                     }, 'Localization failed')
+                                     }, 'Localization failed');
                                  }
                              });
         }, function(err) {
