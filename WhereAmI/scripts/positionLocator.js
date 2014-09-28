@@ -20,7 +20,8 @@ var getPosition = function (useLocation) {
                                  if (status == google.maps.GeocoderStatus.OK) {
                                      useLocation('The location is' + results[0], pos);
                                  } else {
-                                    alert(currentLocation = 'Location unavailable. Status: ' + status);
+                                     navigator.notification.alert(currentLocation = 'Location unavailable. Please check internet connection', function() {
+                                     }, 'Localization failed')
                                  }
                              });
         }, function(err) {
