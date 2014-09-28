@@ -7,20 +7,17 @@ alert
         var app;
         window.APP = {
             models: {
-                home: {
-                        title: 'Where am I?'
-                    },
                 settings: {
                         title: 'Settings'
                     },
                 find: {
-                        title: 'Where am I?'
+                        title: 'Your location'
                     }
             },
             getCurrentLocation: 'lala'//getPosstion(
         }
          
-        navigator.splashscreen.hide();
+        //navigator.splashscreen.hide();
 
         app = new kendo.mobile.Application(document.body, {
 
