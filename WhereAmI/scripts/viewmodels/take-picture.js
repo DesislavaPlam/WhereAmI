@@ -20,7 +20,8 @@ app.viewmodels = app.viewmodels || {};
                 var configuration = {
                     quality: 50,
                     destinationType: Camera.DestinationType.NATIVE_URL,
-                    sourceType : Camera.PictureSourceType.CAMERA
+                    sourceType : Camera.PictureSourceType.CAMERA,
+                    saveToPhotoAlbum: true
                 };
             
                 navigator.camera.getPicture(
@@ -31,7 +32,8 @@ app.viewmodels = app.viewmodels || {};
                 var configuration = {
                     quality: 50,
                     destinationType: Camera.DestinationType.NATIVE_URL,
-                    sourceType : Camera.PictureSourceType.PHOTOLIBRARY 
+                    sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
+                    saveToPhotoAlbum: true
                 };
                 navigator.camera.getPicture(
                     onSuccess, onFail, configuration);
