@@ -6,6 +6,7 @@ app.viewmodels = app.viewmodels || {};
     var onSuccess = function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
         image.src = imageURI;
+        
     }
         
     var onFail = function onFail(message) {
