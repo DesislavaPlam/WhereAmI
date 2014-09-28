@@ -1,0 +1,5 @@
+<div data-role="view" data-title="Find" data-layout="main" data-model="APP.models.find">
+  <h1 data-bind="html: title"></h1>
+  <div id="map" style="height: 300%; width: 100%; position: absolute; min-width:100%"></div>
+  <p id="location" style="position: absolute" data-bind="events:{deviceready: getCurrentLocation}"></p>
+</div>
