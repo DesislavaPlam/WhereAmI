@@ -18,7 +18,10 @@ app.checkConnection = app.checkConnection || {};
                 states[Connection.CELL_4G] = 'Cell 4G connection';
                 states[Connection.CELL] = 'Cell generic connection';
                 states[Connection.NONE] = 'No network connection';
-                return states[networkState];
+                
+                var connectionType = "<strong>Connection type:</strong> " + states[networkState];
+                
+                return connectionType;
             }
         }
         var connectionStatus = kendo.observable(model);
