@@ -9,7 +9,7 @@ app.viewmodels = app.viewmodels || {};
     }
         
     var onFail = function onFail(message) {
-        alert('Failed because: ' + message);
+        navigator.notification.alert('Failed because: ' + message);
     }
     
     function init(e) {
