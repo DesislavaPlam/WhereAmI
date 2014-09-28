@@ -4,7 +4,6 @@ app.viewmodels = app.viewmodels || {};
 
 (function(scope) {
     function createMap() {
-        var latlng;
         getPosition(function(street, position) {
             latlng = position;
             var myOptions = {
@@ -20,21 +19,19 @@ app.viewmodels = app.viewmodels || {};
             console.log(street);
         });
     }
-    
-    function start() {
-        function init(e) {
-            var model = {
-                createGoogleMap: createMap
-            }
-            var vm = kendo.observable(model);
-        
-            kendo.bind(e.view.element, vm);
+
+    function bindMapCreationToKendo(e) {
+        var model = {
+            createGoogleMap: createMap
         }
-        scope.initKendo = {
-            initMaps: init
-        };
+        var vm = kendo.observable(model);
+        
+        kendo.bind(e.view.element, vm);
     }
     
-    google.maps.event.addDomListener(window, 'load', start);
-    document.addEventListener('deviceready', start, false);
+    google.maps.event.addDomListener(window, 'load', function() {
+        scope.initKendo = {
+            initMaps: bindMapCreationToKendo
+        };
+    });
 }(app.viewmodels));
