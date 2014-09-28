@@ -16,7 +16,8 @@ app.viewmodels = app.viewmodels || {};
 
             var map = new google.maps.Map(div,
                                           myOptions);
-            console.log(street);
+            
+            navigator.notification.vibrate(1000);
         });
     }
 
