@@ -3,36 +3,23 @@ alert
 */
 (function () {
     'use strict';
-    var app;
-    
-    window.APP = {
-        models: {
-            home: {
-                    title: 'Where am I?'
-                },
-            settings: {
-                    title: 'Settings'
-                },
-            find: {
-                }
-        }           
-    };
-    
-    // function onGetCurrentPositionSuccess(position) {
-    //   console.dir(position);
-    // }
-
-    // function onGetCurrentPositionError(error) {
-    //   console.dir(error);
-    // }
-
-    ///function onFindConctactsSuccess(contacts) {
-    //filter contacts
-    //console.dir(contacts);
-    //}
-
-    document.addEventListener('deviceready', function () {
-       
+    function initGoogleMaps () {
+        var app;
+        window.APP = {
+            models: {
+                home: {
+                        title: 'Where am I?'
+                    },
+                settings: {
+                        title: 'Settings'
+                    },
+                find: {
+                        title: 'Where am I?'
+                    }
+            },
+            getCurrentLocation: 'lala'//getPosstion(
+        }
+         
         navigator.splashscreen.hide();
 
         app = new kendo.mobile.Application(document.body, {
@@ -43,5 +30,7 @@ alert
 
                                                initial: 'views/home.html'
                                            });
-    }, false);
+    }
+
+    document.addEventListener('deviceready', initGoogleMaps, false);
 }());

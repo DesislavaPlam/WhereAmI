@@ -4,7 +4,6 @@
 
 /////require(['positionLocator'], function(locatePosition) {
 'use strict';
-console.log('hi');
 function initGoogleMaps () {
     var app;
     window.APP = {
@@ -32,34 +31,11 @@ function initGoogleMaps () {
     
                                        });
     
-    // CALLBACKS WTF WTF SRSLY SAY NOT TO JS
-    function create() {
-        //alert('here');
-        var latlng;
-        getPosition(function(street, position) {
-            alert('sadasdsadasdas');
-            latlng = position;
-            var myOptions = {
-                zoom: 18,
-                center: latlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            alert(document);
-            var div = document.getElementById("map");
-            alert('BeforeMap');
-            var map = new google.maps.Map(div,
-                                          myOptions);
-            console.log(street); 
-        });
-    }
-    //alert('here');
+    // CALLBACKS WTF WTF SRSLY 
     document.addEventListener('deviceready', create, false);
 }
 
-//initGoogleMaps();
 document.addEventListener('deviceready', initGoogleMaps, false);
-//DOES FUCKIN MAGIC PLS EXPLAIN WAT
-//
 //google.maps.event.addDomListener(window, 'load', initGoogleMaps);
 //document.addEventListener('deviceready', getPosstion, false);
 //google.maps.event.addDomListener(window, 'load', getPosstion);
