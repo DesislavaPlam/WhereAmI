@@ -3,6 +3,7 @@ alert
 */
 (function () {
     'use strict';
+    
     function initGoogleMaps () {
         var app;
         window.APP = {
@@ -14,7 +15,7 @@ alert
                         title: 'Your location'
                     }
             },
-            getCurrentLocation: 'lala'//getPosstion(
+            getCurrentLocation: 'lala'
         }
          
         //navigator.splashscreen.hide();
