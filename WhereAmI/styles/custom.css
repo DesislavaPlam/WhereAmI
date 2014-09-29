@@ -2,9 +2,14 @@
     width: 100%;
 }
 
-.buttonPicture
-{
+.buttonPicture{
     width: 100%;
     border: 1px;
     color: #000;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }

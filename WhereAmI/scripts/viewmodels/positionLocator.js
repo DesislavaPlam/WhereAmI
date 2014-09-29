@@ -32,7 +32,7 @@ var getPosition = (function() {
         navigator.geolocation.getCurrentPosition(function(position) {
             locateDevice(callback, position);
         }, function(err) {
-            alert('Erorr occured in application');       
+            alert('Erorr occured in application: ' + err);       
         });
     };
 }());

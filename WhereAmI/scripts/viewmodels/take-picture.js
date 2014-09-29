@@ -6,7 +6,10 @@ app.viewmodels = app.viewmodels || {};
     var onSuccess = function onSuccess(imageURI) {
         var image = document.getElementById('myImage');
         image.src = imageURI;
-        
+        if (navigator.connection.type !== Connection.NONE) {
+        	var facebookImg = document.getElementById('facebookShareButton');
+            facebookImg.src = 'http://www.syltrader.com.au/facebook-share-buttons.png';
+        }
     }
         
     var onFail = function onFail(message) {
@@ -50,3 +53,5 @@ app.viewmodels = app.viewmodels || {};
         init: init
     };
 }(app.viewmodels));
+
+
