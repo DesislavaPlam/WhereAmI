@@ -7,8 +7,8 @@ app.viewmodels = app.viewmodels || {};
         var image = document.getElementById('myImage');
         image.src = imageURI;
         if (navigator.connection.type !== Connection.NONE) {
-        	var facebookImg = document.getElementById('facebookShareButton');
-            facebookImg.src = 'http://www.syltrader.com.au/facebook-share-buttons.png';
+        	var sendEmailImg = document.getElementById('sendEmailButton');
+            sendEmailImg.src = 'http://www.clipartbest.com/cliparts/dc7/e6e/dc7e6eEdi.gif';
         }
     }
         
