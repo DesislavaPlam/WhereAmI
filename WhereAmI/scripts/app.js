@@ -4,7 +4,7 @@ alert
 (function () {
     'use strict';
     
-    function initGoogleMaps () {
+    function initApp () {
         var app;
         window.APP = {
             models: {
@@ -30,5 +30,5 @@ alert
                                            });
     }
 
-    document.addEventListener('deviceready', initGoogleMaps, false);
+    document.addEventListener('deviceready', initApp, false);
 }());

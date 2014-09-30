@@ -19,7 +19,7 @@ var getPosition = (function() {
                          }, function(results, status) {
                              if (status === google.maps.GeocoderStatus.OK) {
                                  if (callback !== undefined) {
-                                     callback('The location is' + results[0], pos);
+                                     callback(results[0].formatted_address, pos);
                                  }
                              } else {
                                  navigator.notification.alert(currentLocation = 'Location unavailable. Please check internet connection', function() {
